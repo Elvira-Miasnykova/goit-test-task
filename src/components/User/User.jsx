@@ -1,5 +1,5 @@
 import useLocalStorage from "hooks";
-import { Avatar, Box, Button, Circle, Followers, Image, Line, Logo, Tweets, UserContainer } from "./User.styled";
+import { Avatar, UserInfo, Button, Circle, Followers, Image, Line, Logo, Tweets, UserContainer } from "./User.styled";
 
 const User = () => {
     const [isFollowing, setIsFollowing] = useLocalStorage('following', false);
@@ -18,25 +18,21 @@ const User = () => {
     const changedFollowers = () => {
     const string = followers.toString();
     const length = followers.toString().length;
-
-    const newString =
-      string.slice(0, length - 3) + ',' + string.slice(length - 3, length);
-
-    return newString;
+    return string.slice(0, length - 3) + ',' + string.slice(length - 3, length);
     };
     
     return (
         <UserContainer>
-      <Logo />
+      <Logo alt="logo"/>
       <Image />
-      <Box>
+      <UserInfo>
         <Line />
         <Circle>
-          <Avatar />
+          <Avatar alt="avatar"/>
         </Circle>
         <Line />
-      </Box>
-      <Tweets>777 tweets</Tweets>
+      </UserInfo>
+        <Tweets>{777} tweets</Tweets>
       <Followers>{changedFollowers()} Followers</Followers>
       <Button
         isFolllow={isFollowing}

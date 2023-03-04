@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 import logo from '../../img/Logo.png';
-import logo2 from '../../img/Logo2x.png';
-import logo3 from '../../img/Logo3x.png';
 import picture from '../../img/picture.png';
-import picture2 from '../../img/picture2x.png';
-import picture3 from '../../img/picture3x.png';
 import user from '../../img/Hansel.png';
-import user2 from '../../img/Hansel2x.png';
-import user3 from '../../img/Hansel3x.png';
 
 export const UserContainer = styled.div`
   position: relative;
@@ -40,16 +34,6 @@ export const Logo = styled.div`
   top: 20px;
   left: 20px;
   background-image: url(${logo});
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(${logo2});
-  }
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 3dppx) {
-    background-image: url(${logo3});
-  }
 `;
 
 export const Image = styled.div`
@@ -61,19 +45,9 @@ export const Image = styled.div`
   top: 28px;
   left: 36px;
   background-image: url(${picture});
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(${picture2});
-  }
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 3dppx) {
-    background-image: url(${picture3});
-  }
 `;
 
-export const Box = styled.div`
+export const UserInfo = styled.div`
   margin-top: 178px;
   display: flex;
   align-items: center;
@@ -109,16 +83,6 @@ export const Avatar = styled.div`
   background-size: contain;
   background-position: center, center;
   background-image: url(${user});
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(${user2});
-  }
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(${user3});
-  }
 `;
 
 export const Tweets = styled.p`
