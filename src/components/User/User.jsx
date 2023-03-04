@@ -5,7 +5,8 @@ const User = () => {
     const [isFollowing, setIsFollowing] = useLocalStorage('following', false);
     const [followers, setFollowers] = useLocalStorage('followers', 100500);
 
-    const followingCheck = () => {
+  const followingCheck = () => {
+      setIsFollowing(!isFollowing);
         if (isFollowing) {
             setFollowers(followers - 1);
         }
@@ -39,10 +40,7 @@ const User = () => {
       <Followers>{changedFollowers()} Followers</Followers>
       <Button
         isFolllow={isFollowing}
-        onClick={() => {
-          setIsFollowing(!isFollowing);
-          followingCheck();
-        }}
+        onClick={() => {followingCheck();}}
       >
         {isFollowing ? 'Following' : 'Follow'}
       </Button>
